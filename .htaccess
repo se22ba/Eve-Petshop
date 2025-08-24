@@ -1,0 +1,14 @@
+# Desactiva cualquier rewrite heredado acá dentro
+RewriteEngine Off
+
+# Permite servir íconos siempre
+<IfModule mod_authz_core.c>
+  Require all granted
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Allow from all
+</IfModule>
+
+# Evita listado de directorios (opcional)
+Options -Indexes

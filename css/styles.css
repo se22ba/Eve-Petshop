@@ -111,6 +111,7 @@ a {
   display: block;
 }
 
+
 /* ===== Paw patterned background ===== */
 .bg-paws {
   position: relative;
@@ -168,6 +169,7 @@ a {
   object-fit: cover;
 }
 
+
 /* ===== Paw overlay & animation ===== */
 .paw-overlay {
   position: fixed;
@@ -176,6 +178,7 @@ a {
   overflow: hidden;
   z-index: 1050;
 }
+
 
 .paw {
   position: fixed;
@@ -201,3 +204,21 @@ a {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+/* Honeypot anti-spam: fuera de vista pero presente en DOM */
+.hp-field { position:absolute !important; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden }
+
+/* Selector de horario accesible en mobile */
+.hora-select { min-height: 48px; font-size: 1rem; }
+@media (max-width: 576px) {
+  .hora-select { font-size: 1.1rem; padding: 0.8rem; }
+  
+}
+@media (min-width: 992px) {
+  #carruselPerros .carousel-item img {
+    height: 70vh;          /* alto cómodo de pantalla */
+    max-height: 70vh;      /* override del 540px */
+    object-fit: contain;   /* NO recorta */
+    background: #fff;      /* “barras” blancas si la foto no llena */
+  }
+}
